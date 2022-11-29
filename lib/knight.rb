@@ -16,5 +16,6 @@ class Knight
     next_moves = MOVES.map do |move|
       move.each_with_index.map { |n, i| n + @position[i] unless (n + @position[i]).negative? || (n + @position[i]) > 7 }
     end
+    next_moves.delete_if { |move| move.include?(nil) }
   end
 end

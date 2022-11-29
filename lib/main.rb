@@ -1,7 +1,5 @@
 require_relative 'board'
 
-knight = Knight.new([3, 4])
+board = Board.new
 
-p knight.position
-next_moves = knight.next_moves
-p next_moves
+board.knight_moves([3, 4], [4, 3])
